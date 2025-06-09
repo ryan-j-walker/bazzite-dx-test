@@ -22,6 +22,9 @@ find "${THEMEDIR}" -name '*.build' -type f -delete
 gtk-update-icon-cache -f -t "${THEMEDIR}" && xdg-desktop-menu forceupdate
 rm -rf MoreWaita-main/ main.zip
 
+# Download Papirus Icons
+wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="/usr/share/icons" sh
+
 # Download Vimix Cursors
 wget https://github.com/vinceliuice/Vimix-cursors/archive/master.zip
 unzip master.zip
