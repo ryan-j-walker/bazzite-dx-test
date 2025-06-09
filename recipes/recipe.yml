@@ -25,7 +25,9 @@ modules:
         - com.github.iwalton3.jellyfin-media-player
         - com.github.wwmm.easyeffects
         - com.makemkv.MakeMKV
+        - org.fedoraproject.MediaWriter
       remove:
+        - io.gitlab.adhami3310.Impression
         - org.gnome.Maps
         - org.mozilla.Thunderbird
         - org.mozilla.firefox
