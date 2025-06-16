@@ -16,6 +16,15 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+  
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add spaces or "Nerd Font" suffix.
+      google-fonts:
+        - Roboto
+        - Roboto Mono
+        - Roboto Serif
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -26,21 +35,11 @@ modules:
         - com.github.wwmm.easyeffects
         - com.makemkv.MakeMKV
         - dev.heppen.webapps
-        - org.fedoraproject.MediaWriter
       remove:
         - io.gitlab.adhami3310.Impression
         - org.gnome.Maps
         - org.mozilla.Thunderbird
         - org.mozilla.firefox
-
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode # don't add spaces or "Nerd Font" suffix.
-      google-fonts:
-        - Roboto
-        - Roboto Mono
-        - Roboto Serif
   
   - type: script
     scripts:
