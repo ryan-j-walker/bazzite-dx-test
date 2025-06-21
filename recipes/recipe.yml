@@ -19,40 +19,7 @@ modules:
   
   - type: fonts
     fonts:
-      google-fonts:
-        - Noto Sans
-        - Noto Sans Mono
-        - Noto Serif
       nerd-fonts:
-        - FiraCode
-  
-  - type: dnf
-    repos:
-      cleanup: true
-      copr:
-        enable:
-          - ublue-os/packages
-    install:
-      packages:
-        - code
-        - firewall-config
-        - fuse-encfs
-        - gnome-tweaks
-        - iwd
-        - podman-compose
-        - powertop
-        - samba
-        - setools-console
-        - uupd
-    remove:
-      auto-remove: true
-      packages:
-        - firefox
-        - firefox-langpacks
-        - google-noto-sans-balinese-fonts
-        - google-noto-sans-cjk-fonts
-        - google-noto-sans-javanese-fonts
-        - google-noto-sans-sundanese-fonts
         - FiraCode # don't add spaces or "Nerd Font" suffix.
 
   - type: default-flatpaks
@@ -63,8 +30,6 @@ modules:
         - com.github.iwalton3.jellyfin-media-player
         - com.github.wwmm.easyeffects
         - com.makemkv.MakeMKV
-        - com.mattjakeman.ExtensionManager
-        # - com.visualstudio.code
         - dev.heppen.webapps
       remove:
         - io.gitlab.adhami3310.Impression
@@ -73,8 +38,6 @@ modules:
         - org.mozilla.firefox
   
   - type: script
-    snippets:
-      - sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/vscode.repo
     scripts:
       - theming.sh
   
