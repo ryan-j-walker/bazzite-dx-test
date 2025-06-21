@@ -30,8 +30,10 @@ modules:
           - ublue-os/packages
     install:
       packages:
+        - code
         - firewall-config
         - fuse-encfs
+        - gnome-tweaks
         - iwd
         - podman-compose
         - powertop
@@ -54,7 +56,7 @@ modules:
   
   - type: default-flatpaks
     notify: true
-    user:
+    system:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       repo-title: Flathub
@@ -67,7 +69,7 @@ modules:
         - com.github.wwmm.easyeffects
         - com.makemkv.MakeMKV
         - com.mattjakeman.ExtensionManager
-        - com.visualstudio.code
+        # - com.visualstudio.code
         - dev.heppen.webapps
         - io.github.dvlv.boxbuddyrs
         - io.github.flattool.Ignition
