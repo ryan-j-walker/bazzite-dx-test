@@ -104,6 +104,8 @@ modules:
         - uupd.timer
   
   - type: script
+    snippets:
+      - sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/vscode.repo
     scripts:
       - theming.sh
 
