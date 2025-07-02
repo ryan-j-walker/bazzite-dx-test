@@ -59,6 +59,7 @@ modules:
   - type: script
     scripts:
       - theming.sh
+      - vscode.sh
   
   # - type: initramfs
 
