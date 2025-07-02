@@ -19,8 +19,12 @@ modules:
   
   - type: fonts
     fonts:
+      google-fonts:
+        - Noto Sans
+        - Noto Sans Mono
+        - Noto Serif
       nerd-fonts:
-        - FiraCode # don't add spaces or "Nerd Font" suffix.
+        - FiraCode
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
