@@ -6,7 +6,7 @@ name: bluefin-dx
 description: Bluefin-dx with my tweaks. Made with BlueBuild.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-dx-gnome-nvidia-open
+base-image: ghcr.io/ublue-os/bazzite-dx-gnome-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
