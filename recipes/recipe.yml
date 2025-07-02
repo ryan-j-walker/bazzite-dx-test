@@ -19,11 +19,11 @@ modules:
 
   - type: dnf
     repos:
-    cleanup: true # clean up added repos after module is done
-    files:
-      - https://packages.microsoft.com/yumrepos/vscode
-    keys:
-      - https://packages.microsoft.com/keys/microsoft.asc
+      cleanup: true # clean up added repos after module is done
+      files:
+        - https://packages.microsoft.com/yumrepos/vscode
+      keys:
+        - https://packages.microsoft.com/keys/microsoft.asc
     install:
       packages:
         - code
