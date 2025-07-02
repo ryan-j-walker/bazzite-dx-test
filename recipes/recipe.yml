@@ -6,7 +6,7 @@ name: bluefin-dx
 description: Bluefin-dx with my tweaks. Made with BlueBuild.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-dx-gnome-nvidia
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -18,9 +18,19 @@ modules:
   #       destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
+    repos:
+    cleanup: true # clean up added repos after module is done
+    files:
+      - https://packages.microsoft.com/yumrepos/vscode
+    keys:
+      - https://packages.microsoft.com/keys/microsoft.asc
     install:
       packages:
+        - code
         - gnome-tweaks
+        - podman-compose
+        - podman-machine
+        - podman-tui
   
   - type: fonts
     fonts:
