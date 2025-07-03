@@ -1,6 +1,8 @@
 type: default-flatpaks
 notify: true
 system:
+  remove:
+    - org.mozilla.firefox
   install:
     - com.github.iwalton3.jellyfin-media-player
     - com.github.wwmm.easyeffects
