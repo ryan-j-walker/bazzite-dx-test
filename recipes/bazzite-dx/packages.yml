@@ -1,4 +1,8 @@
 type: dnf
+remove:
+  auto-remove: true
+  packages:
+    - fish
 install:
   packages:
     - podman-compose
