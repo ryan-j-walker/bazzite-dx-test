@@ -6,7 +6,7 @@ name: bluefin-dx
 description: Bluefin-dx with my tweaks. Made with BlueBuild.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -21,16 +21,13 @@ modules:
     install:
       packages:
         - gnome-tweaks
+        - google-noto-fonts-all
         - podman-compose
         - podman-machine
         - podman-tui
   
   - type: fonts
     fonts:
-      google-fonts:
-        - Noto Sans
-        - Noto Sans Mono
-        - Noto Serif
       nerd-fonts:
         - FiraCode
 
