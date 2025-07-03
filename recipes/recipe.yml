@@ -1,46 +1,20 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: bluefin-dx
+name: bazzite-dx-test
 # description will be included in the image's metadata
-description: Bluefin-dx with my tweaks. Made with BlueBuild.
+description: Bazzite-dx with my tweaks. Made with BlueBuild.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin-dx
+base-image: ghcr.io/ublue-os/bazzite-dx-nvidia-open
+
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-  
-  - type: fonts
-    fonts:
-      nerd-fonts:
-        - FiraCode
-
-  - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      install:
-        - ca.desrt.dconf-editor
-        - com.github.iwalton3.jellyfin-media-player
-        - com.github.wwmm.easyeffects
-        - com.makemkv.MakeMKV
-        - dev.heppen.webapps
-      remove:
-        - io.gitlab.adhami3310.Impression
-        - org.gnome.Maps
-        - org.mozilla.Thunderbird
-        - org.mozilla.firefox
-  
-  - type: script
-    scripts:
-      - theming.sh
-      
-  - type: initramfs
+  - from-file: bazzite-dx/fonts.yml
+  - from-file: bazzite-dx/packages.yml
+  - from-file: bazzite-dx/flatpaks.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
