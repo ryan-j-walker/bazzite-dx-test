@@ -21,7 +21,9 @@ modules:
     install:
       packages:
         - gnome-tweaks
-        - google-noto-fonts-all
+        - google-noto-sans-fonts
+        - google-noto-sans-mono-fonts
+        - google-noto-serif-fonts
         - podman-compose
         - podman-machine
         - podman-tui
