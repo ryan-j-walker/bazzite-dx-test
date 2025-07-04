@@ -5,5 +5,4 @@ remove:
     - fish
 install:
   packages:
-    - applet-window-buttons
     - podman-compose
