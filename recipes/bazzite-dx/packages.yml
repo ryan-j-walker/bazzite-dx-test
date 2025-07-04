@@ -2,6 +2,7 @@ type: dnf
 remove:
   auto-remove: true
   packages:
+    - ffmpeg
     - fish
 install:
   packages:
