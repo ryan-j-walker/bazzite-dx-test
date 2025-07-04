@@ -6,4 +6,5 @@ remove:
     - fish
 install:
   packages:
+    - goverlay
     - podman-compose
